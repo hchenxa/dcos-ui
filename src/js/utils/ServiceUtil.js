@@ -35,6 +35,11 @@ const ServiceUtil = {
             .map(function (uri) {
               return {uri: uri.trim()};
             });
+        definition.constraints = formModel.Optional.constraints &&
+          formModel.Optional.constraints.split(',')
+            .map(function (item) {
+              return item.split(':')
+            });
       }
 
       if (formModel['Container Settings'] != null) {
@@ -65,6 +70,7 @@ const ServiceUtil = {
 
     appDefinition.executor = service.getExecutor();
     appDefinition.fetch = service.getFetch();
+    appDefinition.constraints = service.getConstraints();
 
     let containerSettings = service.getContainerSettings();
     if (
