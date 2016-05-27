@@ -45,7 +45,7 @@ let SERVICE_SCHEMA = {
           type: 'number',
           default: 1,
           getter: function (service) {
-            return (service.getInstancesCount() || 0);
+            return (service.getInstancesCount() || 0) + '';
           }
         },
         cmd: {
