@@ -1,4 +1,4 @@
-var POD_STATUS = {
+var SERVICE_STATUS = {
   RUNNING: {
     key: 0,
     displayName: 'Running'
@@ -13,4 +13,4 @@ var POD_STATUS = {
   }
 };
 
-module.exports = POD_STATUS;
+module.exports = SERVICE_STATUS;
